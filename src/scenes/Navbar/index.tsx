@@ -1,10 +1,10 @@
 import { useState } from "react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
-import Logo from "@/assets/duckLogo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import homeLogo from "@/assets/homeLogo.png";
 
 type Props = {
     selectedPage: SelectedPage;
@@ -67,6 +67,9 @@ const Navbar = ( {selectedPage, setSelectedPage}: Props) => {
             </div>
         </div>
 
+    </div>
+    <div className = {`${flexBetween} fixed top-0 z-30 w-full h-screen justify-center items-center`}>
+        <img src= {homeLogo} alt="Home Logo" />
     </div>
   </nav>;
 };
